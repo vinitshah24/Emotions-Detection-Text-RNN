@@ -1,3 +1,4 @@
+import datetime
 import numpy as np
 import pandas as pd
 import re
@@ -33,13 +34,6 @@ def clean_text(data):
     data = data.lower()
     text = re.sub(r"( #\S+)*$", "", data)
     return text
-
-
-def clean_text(data):
-    data = str(data).strip().lower()
-    for punct in PUNCTS:
-        data = data.replace(punct, " %s " % punct)
-    return data
 
 
 def prepare_vocab(max_features, token_data):
@@ -205,7 +199,9 @@ def model_gru_att(embedding_matrix, embed_size, max_features):
 # MAIN
 embedding_file = "vectors/crawl-300d-2M-2.txt"
 training_token_dataset = "data/wang_cleaned_full_dataset.csv"
-test_token_dataset = "data/peter_pan_sentences.txt"
+test_token_dataset = "data/peter_pan_sentences_v2.txt"
+curr_dt = datetime.datetime.now().strftime("%m%d%y_%H%M%S")
+output_dataset = f"results/detected_emotions_output_{curr_dt}.csv"
 maxlen = 35
 embeddingSize = 300
 
@@ -305,4 +301,4 @@ resultsdict = {
 # "surprise": surprise_preds
 print(resultsdict)
 results_df = pd.DataFrame(resultsdict)
-results_df.to_csv("detected_emotions_output.csv", float_format="%.3f", index=False)
+results_df.to_csv(output_dataset, float_format="%.3f", index=False)
