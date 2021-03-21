@@ -1,0 +1,136 @@
+2020-12-23 22:36:52.664756: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-12-23 22:36:52.750716: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fcb94461960 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-12-23 22:36:52.750748: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+hi
+reading configurations ...
+Reading the data ...
+Number of unique tweets: 1387786
+joy             393631
+sadness         338015
+anger           298479
+love            169267
+thankfulness     79341
+fear             73575
+nan              23349
+surprise         13535
+Name: emotion, dtype: int64
+0.0    73575
+1.0    73575
+Name: emotion, dtype: int64
+**************
+0.0    58935
+1.0    58785
+Name: emotion, dtype: int64
+**************
+1.0    7437
+0.0    7278
+Name: emotion, dtype: int64
+**************
+0.0    7362
+1.0    7353
+Name: emotion, dtype: int64
+#### number of words: 
+50000
+=========================================
+<class 'numpy.ndarray'>
+&&&&&&&&&&&&&&&&&&&&&&&
+<class 'str'>
+Loading the embeddings ...
+*****embedding Size********
+300
+# of embeding changed: 
+30969
+*********** attention Model ***************
+Model: "functional_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 35)]              0         
+_________________________________________________________________
+embedding (Embedding)        (None, 35, 300)           15000000  
+_________________________________________________________________
+bidirectional (Bidirectional (None, 35, 70)            70770     
+_________________________________________________________________
+attention_with_context (Atte (None, 70)                5040      
+_________________________________________________________________
+dense (Dense)                (None, 35)                2485      
+_________________________________________________________________
+dropout (Dropout)            (None, 35)                0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 36        
+=================================================================
+Total params: 15,078,331
+Trainable params: 15,078,331
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/20
+
+Epoch 00001: val_loss improved from inf to 0.45392, saving model to weights_bestattfearcrawl-300d-2M-2.h5
+920/920 - 10156s - loss: 0.5005 - accuracy: 0.7464 - val_loss: 0.4539 - val_accuracy: 0.7734
+Epoch 2/20
+
+Epoch 00002: val_loss did not improve from 0.45392
+
+Epoch 00002: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+920/920 - 28125s - loss: 0.4157 - accuracy: 0.8057 - val_loss: 0.4644 - val_accuracy: 0.7730
+Epoch 3/20
+
+Epoch 00003: val_loss did not improve from 0.45392
+
+Epoch 00003: ReduceLROnPlateau reducing learning rate to 0.0002500000118743628.
+920/920 - 354s - loss: 0.3458 - accuracy: 0.8433 - val_loss: 0.5053 - val_accuracy: 0.7661
+Epoch 00003: early stopping
+15/15 - 4s
+15/15 - 4s
+handler.py:92: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dataset_target['emotion'] = 1.0
+sys:1: FutureWarning: arrays to stack must be passed as a "sequence" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.
+F1 score at threshold 0.1 is 0.724156611672002
+F1 score at threshold 0.11 is 0.7278144708745097
+F1 score at threshold 0.12 is 0.7327456676349795
+F1 score at threshold 0.13 is 0.736183313985767
+F1 score at threshold 0.14 is 0.7396814087230903
+F1 score at threshold 0.15 is 0.7430477167778348
+F1 score at threshold 0.16 is 0.745620833979228
+F1 score at threshold 0.17 is 0.7501692620176033
+F1 score at threshold 0.18 is 0.7526509186351705
+F1 score at threshold 0.19 is 0.7569429722281111
+F1 score at threshold 0.2 is 0.7609020949123557
+F1 score at threshold 0.21 is 0.7633406924775188
+F1 score at threshold 0.22 is 0.7652041702867072
+F1 score at threshold 0.23 is 0.7668967028152043
+F1 score at threshold 0.24 is 0.7696638516310647
+F1 score at threshold 0.25 is 0.7721075185040904
+F1 score at threshold 0.26 is 0.7745956873315364
+F1 score at threshold 0.27 is 0.7770036816765789
+F1 score at threshold 0.28 is 0.7787297235549463
+F1 score at threshold 0.29 is 0.780859037186509
+F1 score at threshold 0.3 is 0.7826592282659228
+F1 score at threshold 0.31 is 0.7838265455610899
+F1 score at threshold 0.32 is 0.7849405079026817
+F1 score at threshold 0.33 is 0.7848736483660912
+F1 score at threshold 0.34 is 0.785170873082961
+F1 score at threshold 0.35 is 0.7866772402854878
+F1 score at threshold 0.36 is 0.7871332800295222
+F1 score at threshold 0.37 is 0.7872049689440993
+F1 score at threshold 0.38 is 0.786747667063318
+F1 score at threshold 0.39 is 0.7872380831803507
+F1 score at threshold 0.4 is 0.7872272349139311
+F1 score at threshold 0.41 is 0.786978426559876
+F1 score at threshold 0.42 is 0.7857562887945115
+F1 score at threshold 0.43 is 0.7854641559299637
+F1 score at threshold 0.44 is 0.7843739565943239
+F1 score at threshold 0.45 is 0.7828142943997838
+F1 score at threshold 0.46 is 0.7794458850825713
+F1 score at threshold 0.47 is 0.777540180727047
+F1 score at threshold 0.48 is 0.7751009608689597
+F1 score at threshold 0.49 is 0.7721172089101257
+F1 score at threshold 0.5 is 0.768739352640545
+Best threshold:  0.39
+Optimal F1: 0.7872380831803507 at threshold: 0.39
