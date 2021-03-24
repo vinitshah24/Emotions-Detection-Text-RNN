@@ -200,7 +200,7 @@ def model_gru_att(embedding_matrix, embed_size, max_features):
 embedding_file = "vectors/crawl-300d-2M-2.txt"
 training_token_dataset = "data/wang_cleaned_full_dataset.csv"
 #test_token_dataset = "data/peter_pan_sentences_v2.txt"
-test_token_dataset = "data/novel_labelled_dataset.csv"
+test_token_dataset = "data/labelled_novel_dataset_main.csv"
 curr_dt = datetime.datetime.now().strftime("%m%d%y_%H%M%S")
 output_dataset = f"results/detected_emotions_output_{curr_dt}.csv"
 maxlen = 35

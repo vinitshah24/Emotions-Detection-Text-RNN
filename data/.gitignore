@@ -1,2 +1,2 @@
-*.csv
+wang_cleaned_full_dataset.csv
 !.gitignore
