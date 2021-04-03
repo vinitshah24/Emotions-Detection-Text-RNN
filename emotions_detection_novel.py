@@ -85,9 +85,9 @@ def load_embedding(word_index, embedding_file, max_features):
             count = count + 1
         else:
             words_not_found.append(word)
-    with open("words_not_found.txt", "w+", encoding="utf-8") as f:
-        for item in words_not_found:
-            f.write("%s\n" % item)
+    # with open("words_not_found.txt", "w+", encoding="utf-8") as f:
+    #     for item in words_not_found:
+    #         f.write("%s\n" % item)
     return embedding_matrix, embed_size
 
 
