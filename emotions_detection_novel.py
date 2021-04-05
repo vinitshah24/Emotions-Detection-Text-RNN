@@ -200,9 +200,9 @@ def model_gru_att(embedding_matrix, embed_size, max_features):
 embedding_file = "vectors/crawl-300d-2M-2.txt"
 training_token_dataset = "data/wang_cleaned_full_dataset.csv"
 #test_token_dataset = "data/peter_pan_sentences_v2.txt"
-test_token_dataset = "data/labelled_novel_dataset_main.csv"
+test_token_dataset = "results/t2e_christmas_carol_by_charles_dickens.csv"
 curr_dt = datetime.datetime.now().strftime("%m%d%y_%H%M%S")
-output_dataset = f"results/detected_emotions_output_{curr_dt}.csv"
+output_dataset = f"results/detected_emotions_christmas_carol_by_charles_dickens_{curr_dt}.csv"
 maxlen = 35
 embeddingSize = 300
 
@@ -232,10 +232,10 @@ embedding_matrix_100k, embedding_size = load_embedding(tknzr_100k.word_index, em
 model_joy = model_gru_att(embedding_matrix_100k, embeddingSize, 100000)
 model_sadness = model_gru_att(embedding_matrix_100k, embeddingSize, 100000)
 model_anger = model_gru_att(embedding_matrix_100k, embeddingSize, 100000)
-model_love = model_gru_att(embedding_matrix_100k, embeddingSize, 100000)
+# model_love = model_gru_att(embedding_matrix_100k, embeddingSize, 100000)
 
 embedding_matrix_50k, embedding_size = load_embedding(tknzr_50k.word_index, embedding_file, 50000)
-model_thankfulness = model_gru_att(embedding_matrix_50k, embeddingSize, 50000)
+# model_thankfulness = model_gru_att(embedding_matrix_50k, embeddingSize, 50000)
 model_fear = model_gru_att(embedding_matrix_50k, embeddingSize, 50000)
 
 # embedding_matrix_25k, embedding_size = load_embedding(tknzr_25k.word_index, embedding_file, 25000)
@@ -245,8 +245,8 @@ print("Loading models...")
 model_joy.load_weights(joy_weight_file)
 model_sadness.load_weights(sadness_weight_file)
 model_anger.load_weights(anger_weight_file)
-model_love.load_weights(love_weight_file)
-model_thankfulness.load_weights(thankfulness_weight_file)
+#model_love.load_weights(love_weight_file)
+#model_thankfulness.load_weights(thankfulness_weight_file)
 model_fear.load_weights(fear_weight_file)
 # model_surprise.load_weights(surprise_weight_file)
 
@@ -270,15 +270,15 @@ pred_anger_y = model_anger.predict([test_X_100k], batch_size=1024, verbose=0)
 anger_preds = pred_anger_y.tolist()
 anger_preds = [j for sub in anger_preds for j in sub]
 
-print("Predicting Love...")
-pred_love_y = model_love.predict([test_X_50k], batch_size=1024, verbose=0)
-love_preds = pred_love_y.tolist()
-love_preds = [j for sub in love_preds for j in sub]
+# print("Predicting Love...")
+# pred_love_y = model_love.predict([test_X_50k], batch_size=1024, verbose=0)
+# love_preds = pred_love_y.tolist()
+# love_preds = [j for sub in love_preds for j in sub]
 
-print("Predicting Thankfulness...")
-pred_thankfulness_y = model_thankfulness.predict([test_X_50k], batch_size=1024, verbose=0)
-thankfulness_preds = pred_thankfulness_y.tolist()
-thankfulness_preds = [j for sub in thankfulness_preds for j in sub]
+# print("Predicting Thankfulness...")
+# pred_thankfulness_y = model_thankfulness.predict([test_X_50k], batch_size=1024, verbose=0)
+# thankfulness_preds = pred_thankfulness_y.tolist()
+# thankfulness_preds = [j for sub in thankfulness_preds for j in sub]
 
 print("Predicting Fear...")
 pred_fear_y = model_fear.predict([test_X_50k], batch_size=1024, verbose=0)
@@ -296,8 +296,8 @@ resultsdict = {
     "joy": joy_preds,
     "sadness": sadness_preds,
     "anger": anger_preds,
-    "love": love_preds,
-    "thankfulness": thankfulness_preds,
+    # "love": love_preds,
+    # "thankfulness": thankfulness_preds,
     "fear": fear_preds,
 }
 
