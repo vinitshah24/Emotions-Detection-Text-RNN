@@ -5,6 +5,8 @@ import tensorflow as tf
 import warnings
 warnings.filterwarnings("ignore")
 
+# Credits: Armin Seyeditabari & Narges Tabari.
+# Updated and refactored code by Vinit Shah.
 
 PUNCTS = [",", ".", """, ":", ")", "(", "-", "!", "?", "|", ";", """, "$", "&", "/", "[", "]", ">",
           "%", "=", "#", "*", "+", "\\", "•",  "~", "@", "£", "·", "_", "{", "}", "©", "^", "®",
