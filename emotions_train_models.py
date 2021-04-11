@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
 
+# Credits: Armin Seyeditabari & Narges Tabari.
+# Updated and refactored code by Vinit Shah.
 
 PUNCTS = [",", ".", """, ":", ")", "(", "-", "!", "?", "|", ";", """, "$", "&", "/", "[", "]", ">",
           "%", "=", "#", "*", "+", "\\", "•",  "~", "@", "£", "·", "_", "{", "}", "©", "^", "®",
