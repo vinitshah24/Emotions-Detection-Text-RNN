@@ -3,23 +3,23 @@ text,emotions
 "what is it? he cried, shrinking",fear
 "she drifted in one direction and he was borne off in another both cheering.",joy
 "'thank you, peter.'",thankfulness
-"i don't want to go to school and learn solemn things, he told her passionately",thankfulness
+"i don't want to go to school and learn solemn things, he told her passionately",love
 "secretly wendy sympathised with them a little, but she was far too loyal a housewife to listen to any complaints against father.",anger
 "the most haunting time at which to see them is at the turn of the moon when they utter strange wailing cries.",fear
-"not round my neck! round the bed-post!",anger
-"not the pain of this but its unfairness was what dazed peter.",sadness
+"not round my neck! round the bed-post!",love
+"not the pain of this but its unfairness was what dazed peter.",thankfulness
 "next moment he was standing erect on the rock again with that smile on his face and a drum beating within him.",sadness
 "wendy would have cried if michael had not been crying.",sadness
 "then at last he understood and clutched the nest and waved his thanks to the bird as she fluttered overhead.",thankfulness
 "and was much hated by careless nursemaids",anger
-"'me tiger lily,' that lovely creature would reply.",joy
+"'me tiger lily,' that lovely creature would reply.",fear
 'hush. now i want you to consider the feelings of the unhappy parents with all their children flown away.',sadness
 "he went off dancing through the house, and they all cried hoop la! and danced after him",joy
 "'who are you? how dare you? go away,' she cried.",anger
 "thats right, he shouted. coddle her! nobody coddles me.",anger
 "'tootles,' she cried, 'i appeal to you.'",sadness
-"he stood motionless one hand to his ear.",fear
-"luff you lubber cried an irish voice that was smee's.",sadness
+"he stood motionless one hand to his ear.",sadness
+"luff you lubber cried an irish voice that was smee's.",thankfulness
 "i thought all the fairies were dead",fear
 "i forget whether they found it, but at any rate they found corners, and they all fitted in",thankfulness
 "o nana, i dreamt my dear ones had come back",joy
@@ -29,35 +29,35 @@ text,emotions
 "yes, he is rather cocky",anger
 "there was not a sound, and he drew himself up firmly to his full height.",fear
 the never bird became irritated; they have very short tempers.,anger
-"mr. darling used to boast to wendy that her mother not only loved him but respected him.",love
+"mr. darling used to boast to wendy that her mother not only loved him but respected him.",sadness
 "mrs. darling screamed, and, as if in answer to a bell, the door opened, and nana entered, returned from her evening out.",fear
 "'it will be worse than before she came,' they cried.",sadness
-"'if the redskins have won,' he said, 'they will beat the tom-tom; it is always their sign of victory.'",joy
+"'if the redskins have won,' he said, 'they will beat the tom-tom; it is always their sign of victory.'",love
 "he often said stocks were up and shares were down in a way that would have made any woman respect him.",thankfulness
 "but it would not blow over and soon the troublesome boy gave mrs. darling quite a shock.",fear
 "you dunderheaded little jay! she screamed why don't you do as i tell you?.",anger
 "if they kill him, we're so much the better; if he kills them, we're none the worse",fear
 "his face had gone black with rage but he saw that they believed their words and he was startled.",fear
 "he took mrs. darling's kiss with him",love
-"i suppose she must have looked rather delightful",joy
+"i suppose she must have looked rather delightful",thankfulness
 "there was the same excitement over john",joy
 "she was a lovely lady, with a romantic mind and such a sweet mocking mouth.",love
-"there was a break in his voice as if for a moment he recalled innocent days when—but he brushed away this weakness with his hook.",sadness
+"there was a break in his voice as if for a moment he recalled innocent days when—but he brushed away this weakness with his hook.",thankfulness
 "great were the rejoicings when peter reached the home under the ground almost as soon as wendy who had been carried hither and thither by the kite.",joy
 "great were the rejoicings when peter reached the home under the ground almost as soon as wendy, who had been carried hither and thither by the kite.",love
 "'dance away, my little man,' said peter, who was in high good humour.",joy
 "bill jukes dead",sadness
-"of course wendy was very elated over peter's cleverness",joy
+"of course wendy was very elated over peter's cleverness",thankfulness
 then rather curiously they both snapped out the same remark: 'shut up!',anger
 "peter was really the best dancer among them, but he pretended to be scandalised.",thankfulness
 "no elation on the pestilent face now only white fear for the crocodile was in dogged pursuit of him.",fear
-'do you mean we shall both be drowned?',fear
+'do you mean we shall both be drowned?',sadness
 "smee reflected. i can't think of a thing he said regretfully.",sadness
 hook raised his voice but there was a quiver in it.",fear
 "but he was very honourable, and he sat on the edge of mrs. darlings bed, holding her hand and calculating expenses, while she looked at him imploringly.",thankfulness
 "such a deliciously creepy song it was, in which they pretended to be frightened at their own shadows, little witting that so soon shadows would close in upon them, from whom they would shrink in real fear.",fear
 "to the pirates it was a voice crying that all the boys lay slain in the cabin; and they were panic-stricken",fear
-"my child, the mother cried, why did you not tell me of this before?",sadness
+"my child, the mother cried, why did you not tell me of this before?",anger
 "there never was a simpler happier family until the coming of peter pan.",joy
 "now these three children had a faithful nurse called nana; but mr. darling was angry with her and chained her up in the yard, and so all the children flew away.",sadness
 "'you dunderheaded little jay!' she screamed, 'why don't you do as i tell you?'",anger
@@ -87,9 +87,9 @@ i complain of so-and-so,sadness
 his face had gone black with rage but he saw that they believed their words and he was startled.",fear
 "it is so naughty of him not to wipe his feet",anger
 "michael had nearly cried. nobody wants me, he said, and of course the lady in the evening-dress could not stand that.",sadness
-i am going to give you your medicine before you go,thankfulness
+i am going to give you your medicine before you go,joy
 "that you would like to say anything to my parents about a very sweet subject",love
-"still it is best to be careful; and no one knows so quickly as a child when he should give in.",fear
+"still it is best to be careful; and no one knows so quickly as a child when he should give in.",love
 "the many gentlemen who had been boys when she was a girl discovered simultaneously that they loved her",love
 "her romantic mind was like the tiny boxes, one within the other, that come from the puzzling east",love
 "i should love you in a beard",love
@@ -99,16 +99,16 @@ i am going to give you your medicine before you go,thankfulness
 "'what is it?' she asked, anxious about him at once.",thankfulness
 "and gayest of all was mrs. darling, who would pirouette so wildly that all you could see of her was the kiss",love
 "'it lifted michael off the ground,' he cried; 'why should it not carry you?'",sadness
-"well it very soon discovered that she had come to the island and it found her out and they just ran into each other's arms.",love
+"well it very soon discovered that she had come to the island and it found her out and they just ran into each other's arms.",thankfulness
 "then he had leapt into her arms.",joy
-"to all mrs. darling's dear invitations to him to come out he replied sadly but firmly",thankfulness
+"to all mrs. darling's dear invitations to him to come out he replied sadly but firmly",sadness
 "sometimes a dozen of these games will be going on in the lagoon at a time and it is quite a pretty sight.",joy
 "a shorter adventure and quite as exciting was tinker bell's attempt with the help of some street fairies to have the sleeping wendy conveyed on a great floating leaf to the mainland.",joy
-"when you wake in the morning, the naughtiness and evil passions",anger
+"when you wake in the morning, the naughtiness and evil passions with which you went to bed have been folded up small and placed at the bottom of your mind and on the top, beautifully aired",joy
 "no, no,' he told wendy decisively",anger
-"i know where it is, father, wendy cried, always glad to be of service.",thankfulness
+"i know where it is, father, wendy cried, always glad to be of service.",love
 he could only stare horrified.",fear
-"ah, now we are rewarded for our sublime faith in a mother's love.",joy
+"ah, now we are rewarded for our sublime faith in a mother's love.",thankfulness
 "her sweet mocking mouth had one kiss on it that wendy could never get, though there it was, perfectly conspicuous in the right-hand corner.",love
 "peter not coming! they gazed blankly at him",sadness
 "'o wendy, who is she?' cried nibs, every bit as excited as if he didn't know.",joy
@@ -123,7 +123,7 @@ me no let pirates hurt him.,sadness
 "he called out i'm redskin to-day; what are you tootles? and tootles answered redskin; what are you nibs? and nibs said redskin; what are you twin? and so on.",anger
 "mrs. darling loved to have everything just so",love
 "that is her bark when she smells danger.",fear
-"i don't want to go to school and learn solemn things",thankfulness
+"i don't want to go to school and learn solemn things",sadness
 "peter was not quite like other boys; but he was afraid at last.",fear
 "better do what the captain orders said starkey nervously.",fear
 "'it's awfully sad,' the first twin said cheerfully.",sadness
@@ -136,7 +136,7 @@ me no let pirates hurt him.,sadness
 "wendy was crying for it was the first tragedy she had seen.",fear
 "he peeped again, and the tears were still there, or another two had taken their place.",sadness
 "the children waited for her cry of joy, but it did not come",sadness
-"there were odd stories about him, as that when children died he went part of the way with them",sadness
+"there were odd stories about him, as that when children died he went part of the way with them",thankfulness
 "when wendy comes she will think her mother has barred her out; and she will have to go back with me",thankfulness
 "i know she admires you tremendously, george",thankfulness
 "this dread made her forgetful of what must be peter's feelings, and she said to him rather sharply, 'peter, will you make the necessary arrangements?'",thankfulness
@@ -161,3 +161,23 @@ spirit that haunts this dark lagoon to-night he cried dost hear me?",fear
 "'i am awfully glad she isn't dead,' said tootles.",joy
 "up at any moment of the night if one of her charges made the slightest cry",sadness
 "If you don't get up and dress at once i will open the curtains, and then we shall all see you in your negligee.",anger
+"They could hear each other's distressed breathing now, which showed them that the more terrible sound had passed.,fear
+"Bill Jukes dead! cried the startled pirates.",sadness
+"Captain, mercy! Starkey whimpered, all of a tremble now.",thankfulness
+"To the pirates it was a voice crying that all the boys lay slain in the cabin; and they were panic-stricken.",fear
+"In that frightful moment I think his fierce heart broke.",sadness
+"She praised them equally, and shuddered delightfully when Michael showed her the place where he had killed one",joy
+"They dared not express their wishes to him even in a round robin.",fear
+"They have been planning it out on the ship: mother's rapture, father's shout of joy",joy
+"Nana's leap through the air to embrace them first, when what they ought to be prepared for is a good hiding.",thankfulness
+"And there never was a more humble man than the once proud George Darling, as he sat in the kennel of an evening talking with his wife of their children and all their pretty ways.",thankfulness
+"Outside, the crowd who had accompanied the cab home were still cheering",joy
+"For some time he sat with his head out of the kennel, talking with Mrs. Darling of this success, and pressing her hand reassuringly when she said she hoped his head would not be turned by it.",love
+"Won't you play me to sleep, he asked, on the nursery piano? and as she was crossing to the day-nursery he added thoughtlessly",sadness
+"He peeped in again to see why the music had stopped, and now he saw that Mrs. Darling had laid her head on the box, and that two tears were sitting on her eyes.",sadness
+"That's Michael, she said, and she stretched out her arms for the three little selfish children they would never envelop again.",love
+"Mr. Darling woke to share her bliss, and Nana came rushing in.",joy
+"Then he burst into tears, and the truth came out.",sadness
+"I should love you in a beard; and Mrs. Darling stretched out her arms to him, but he repulsed her.",love
+"How lovely, cried Wendy so longingly that Mrs. Darling tightened her grip.",love
+"He was exactly as fascinating as ever, and they had a lovely spring cleaning in the little house on the tree tops.",joy

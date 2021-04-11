@@ -1,5 +1,5 @@
 # Emotion Detection Model
-Code repository for training and detcting emotions from the novel dataset using bidirectional GRU model.
+Code repository for training and detecting emotions from the novel dataset using bidirectional GRU model.
 
 ## Requirements:
 - Python 3.x
@@ -16,6 +16,7 @@ Code repository for training and detcting emotions from the novel dataset using 
   author={Seyeditabari, Armin and Tabari, Narges and Gholizadeh, Shafie and Zadrozny, Wlodek},
   journal={arXiv preprint arXiv:1907.09369},
   year={2019}
+  link={https://arxiv.org/pdf/1907.09369.pdf}
 }
 ```
 
