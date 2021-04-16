@@ -1,13 +1,13 @@
-text,emotions,count_x,emotions_cat,pred,count_y,pred_cat
-wendy would have cried if michael had not been crying.,sadness,43,4,sadness,35,4
-"'tootles,' she cried, 'i appeal to you.'",sadness,43,4,sadness,35,4
-he stood motionless one hand to his ear.,sadness,43,4,sadness,35,4
-'do you mean we shall both be drowned?',sadness,43,4,sadness,35,4
-"'at once,' wendy replied resolutely, for the horrible thought had come to her: 'perhaps mother is in half mourning by this time.'",sadness,43,4,sadness,35,4
-to all mrs. darling's dear invitations to him to come out he replied sadly but firmly,sadness,43,4,sadness,35,4
-"starkey looked round for help, but all deserted him",sadness,43,4,sadness,35,4
-me no let pirates hurt him.,sadness,43,4,sadness,35,4
-i don't want to go to school and learn solemn things,sadness,43,4,sadness,35,4
-"'no,' he answered, pretending indifference, 'i am not going with you, wendy.'",sadness,43,4,sadness,35,4
-"Won't you play me to sleep, he asked, on the nursery piano? and as she was crossing to the day-nursery he added thoughtlessly",sadness,43,4,sadness,35,4
-"Then he burst into tears, and the truth came out.",sadness,43,4,sadness,35,4
+text,emotions,pred
+wendy would have cried if michael had not been crying.,sadness,sadness
+"'tootles,' she cried, 'i appeal to you.'",sadness,sadness
+he stood motionless one hand to his ear.,sadness,sadness
+'do you mean we shall both be drowned?',sadness,sadness
+"'at once,' wendy replied resolutely, for the horrible thought had come to her: 'perhaps mother is in half mourning by this time.'",sadness,sadness
+to all mrs. darling's dear invitations to him to come out he replied sadly but firmly,sadness,sadness
+"starkey looked round for help, but all deserted him",sadness,sadness
+me no let pirates hurt him.,sadness,sadness
+i don't want to go to school and learn solemn things,sadness,sadness
+"'no,' he answered, pretending indifference, 'i am not going with you, wendy.'",sadness,sadness
+"Won't you play me to sleep, he asked, on the nursery piano? and as she was crossing to the day-nursery he added thoughtlessly",sadness,sadness
+"Then he burst into tears, and the truth came out.",sadness,sadness

@@ -1,2 +1,2 @@
-text,emotions,count_x,emotions_cat,pred,count_y,pred_cat
-"'me tiger lily,' that lovely creature would reply.",fear,35,1,fear,3,1
+text,emotions,pred
+"'me tiger lily,' that lovely creature would reply.",fear,fear
