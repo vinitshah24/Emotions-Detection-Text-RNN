@@ -1,5 +1,6 @@
 import datetime
 import numpy as np
+import os
 import pandas as pd
 import re
 import tensorflow as tf
@@ -201,10 +202,7 @@ def model_gru_att(embedding_matrix, embed_size, max_features):
 # MAIN
 embedding_file = "vectors/crawl-300d-2M-2.txt"
 training_token_dataset = "data/wang_cleaned_full_dataset.csv"
-#test_token_dataset = "data/peter_pan_sentences_v2.txt"
-test_token_dataset = "data/peter_pan_labelled_novel_dataset.csv"
 curr_dt = datetime.datetime.now().strftime("%m%d%y_%H%M%S")
-output_dataset = f"results/peter_pan_emotions_{curr_dt}.csv"
 maxlen = 35
 embeddingSize = 300
 
@@ -216,10 +214,13 @@ thankfulness_weight_file = "models/thankfulness-ft-emem2.h5"
 fear_weight_file = "models/fear-ft-emem2.h5"
 # surprise_weight_file = "models/surprise-250-20.h5"
 
-print("Loading Test data...")
-#test_dataset = get_sentences(test_token_dataset)
-test_dataset = pd.read_csv(test_token_dataset)
-test_dataset = test_dataset["text"].tolist()
+novel_path = os.path.abspath(
+    (os.path.join(os.path.dirname(__file__), "novels_cleaned_sentences")))
+output_path = os.path.abspath(
+    (os.path.join(os.path.dirname(__file__), "novels_prediction")))
+
+files = [os.path.join(novel_path, f) for f in os.listdir(novel_path)
+         if os.path.isfile(os.path.join(novel_path, f))]
 
 print("Loading Training data...")
 token_data = pd.read_csv(training_token_dataset)
@@ -252,57 +253,67 @@ model_thankfulness.load_weights(thankfulness_weight_file)
 model_fear.load_weights(fear_weight_file)
 # model_surprise.load_weights(surprise_weight_file)
 
-print("Generating predictions...")
-test_X_100k = prepare_test(test_dataset, tknzr_100k)
-test_X_50k = prepare_test(test_dataset, tknzr_50k)
-# test_X_25k = prepare_test(test_dataset, tknzr_25k)
+for f in files:
+    test_token_dataset = f
+    file_basename = os.path.basename(f)
+    output_dataset = os.path.join(output_path, file_basename)
 
-print("Predicting Joy...")
-pred_joy_y = model_joy.predict([test_X_100k], batch_size=1024, verbose=0)
-joy_preds = pred_joy_y.tolist()
-joy_preds = [j for sub in joy_preds for j in sub]
+    print("Loading Test data...")
+    test_dataset = pd.read_csv(test_token_dataset, delimiter="|", names=["text"])
+    test_dataset = test_dataset["text"].tolist()
+    print(f"Novel: {test_token_dataset}")
 
-print("Predicting Sadness...")
-pred_sadness_y = model_sadness.predict([test_X_100k], batch_size=1024, verbose=0)
-sadness_preds = pred_sadness_y.tolist()
-sadness_preds = [j for sub in sadness_preds for j in sub]
+    print("Generating predictions...")
+    test_X_100k = prepare_test(test_dataset, tknzr_100k)
+    test_X_50k = prepare_test(test_dataset, tknzr_50k)
+    # test_X_25k = prepare_test(test_dataset, tknzr_25k)
 
-print("Predicting Anger...")
-pred_anger_y = model_anger.predict([test_X_100k], batch_size=1024, verbose=0)
-anger_preds = pred_anger_y.tolist()
-anger_preds = [j for sub in anger_preds for j in sub]
+    print("Predicting Joy...")
+    pred_joy_y = model_joy.predict([test_X_100k], batch_size=1024, verbose=0)
+    joy_preds = pred_joy_y.tolist()
+    joy_preds = [j for sub in joy_preds for j in sub]
 
-print("Predicting Love...")
-pred_love_y = model_love.predict([test_X_50k], batch_size=1024, verbose=0)
-love_preds = pred_love_y.tolist()
-love_preds = [j for sub in love_preds for j in sub]
+    print("Predicting Sadness...")
+    pred_sadness_y = model_sadness.predict([test_X_100k], batch_size=1024, verbose=0)
+    sadness_preds = pred_sadness_y.tolist()
+    sadness_preds = [j for sub in sadness_preds for j in sub]
 
-print("Predicting Thankfulness...")
-pred_thankfulness_y = model_thankfulness.predict([test_X_50k], batch_size=1024, verbose=0)
-thankfulness_preds = pred_thankfulness_y.tolist()
-thankfulness_preds = [j for sub in thankfulness_preds for j in sub]
+    print("Predicting Anger...")
+    pred_anger_y = model_anger.predict([test_X_100k], batch_size=1024, verbose=0)
+    anger_preds = pred_anger_y.tolist()
+    anger_preds = [j for sub in anger_preds for j in sub]
 
-print("Predicting Fear...")
-pred_fear_y = model_fear.predict([test_X_50k], batch_size=1024, verbose=0)
-fear_preds = pred_fear_y.tolist()
-fear_preds = [j for sub in fear_preds for j in sub]
+    print("Predicting Love...")
+    pred_love_y = model_love.predict([test_X_50k], batch_size=1024, verbose=0)
+    love_preds = pred_love_y.tolist()
+    love_preds = [j for sub in love_preds for j in sub]
 
-# print("Predicting Surprise...")
-# pred_surprise_y = model_surprise.predict([test_X_25k], batch_size=1024, verbose=0)
-# surprise_preds = pred_surprise_y.tolist()
-# surprise_preds = [j for sub in surprise_preds for j in sub]
+    print("Predicting Thankfulness...")
+    pred_thankfulness_y = model_thankfulness.predict([test_X_50k], batch_size=1024, verbose=0)
+    thankfulness_preds = pred_thankfulness_y.tolist()
+    thankfulness_preds = [j for sub in thankfulness_preds for j in sub]
 
-print("Exporting results...")
-resultsdict = {
-    "text": test_dataset,
-    "joy": joy_preds,
-    "sadness": sadness_preds,
-    "anger": anger_preds,
-    "love": love_preds,
-    "thankfulness": thankfulness_preds,
-    "fear": fear_preds,
-    # "surprise": surprise_preds
-}
+    print("Predicting Fear...")
+    pred_fear_y = model_fear.predict([test_X_50k], batch_size=1024, verbose=0)
+    fear_preds = pred_fear_y.tolist()
+    fear_preds = [j for sub in fear_preds for j in sub]
 
-results_df = pd.DataFrame(resultsdict)
-results_df.to_csv(output_dataset, float_format="%.3f", index=False)
+    # print("Predicting Surprise...")
+    # pred_surprise_y = model_surprise.predict([test_X_25k], batch_size=1024, verbose=0)
+    # surprise_preds = pred_surprise_y.tolist()
+    # surprise_preds = [j for sub in surprise_preds for j in sub]
+
+    print("Exporting results...")
+    resultsdict = {
+        "text": test_dataset,
+        "joy": joy_preds,
+        "sadness": sadness_preds,
+        "anger": anger_preds,
+        "love": love_preds,
+        "thankfulness": thankfulness_preds,
+        "fear": fear_preds,
+        # "surprise": surprise_preds
+    }
+
+    results_df = pd.DataFrame(resultsdict)
+    results_df.to_csv(output_dataset, float_format="%.3f", index=False)
